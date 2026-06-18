@@ -24,7 +24,7 @@ Output is saved as `notes.txt` in the same directory.
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/ai-study-guide.git
+git clone https://github.com/Vences33/ai-study-guide.git
 cd ai-study-guide
 
 # Install dependencies
