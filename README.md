@@ -24,7 +24,7 @@ Output is saved as `notes.txt` in the same directory.
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/ai-study-guide.git
+git clone https://github.com/Vences33/ai-study-guide.git
 cd ai-study-guide
 
 # Install dependencies
@@ -55,8 +55,78 @@ Your study guide will be saved to `notes.txt`.
 
 ## Example output
 
-Input: a 20-page lecture PDF on operating systems
-Output: structured notes with headings, bullet points, key definitions, and exam concepts — in under 2 minutes
+Input: An old 8 page, CS-251 Final exam
+Output:  **CS 251 Final Exam Study Guide,**
+
+**Exam Concepts and Key Definitions**
+
+1. Access Modifiers
+   - `private`: A member variable declared with the `private` access modifier is visible only to methods within the same class. It cannot be accessed by methods in nested classes or other top-level classes in the same package.
+
+2. Overriding Methods
+   - `super`: The keyword `super` is used to call the parent class version of an overridden method.
+
+3. Variable Access
+   - `this`: The keyword `this` can be used to access a member variable hidden by a local variable.
+
+4. Interfaces and Enhanced For Loops
+   - `Iterable`: An interface that allows a class to be used in an enhanced for loop (for-each loop).
+
+5. Inherited Methods
+   - All reference types in Java inherit the `toString()` method.
+
+6. Exception Handling
+   - Keywords: `try`, `catch`, and `finally`.
+
+7. Ternary Operator Example
+   - The ternary operator can be used for simple conditional expressions, such as the following example where it evaluates to 'B'.
+     ```java
+     char c = ( condition ) ? "ABCD".charAt(1) : "EFGH".charAt(1);
+     ```
+
+8. Variable Initialization Values
+   - An uninitialized `int` member variable has a default value of 0.
+   - An uninitialized `Integer` member variable has a default value of `null`.
+
+9. Custom Painting in JPanel
+   - To perform custom painting in a JPanel, you should override the `paintComponent()` method.
+
+10. Map Interface Methods
+    - `entrySet()`: One method provided by the Map interface that views the map as a collection.
+
+**Programming Tasks and Examples**
+
+1. Creating a new class called `DoubleCounter` that extends `Counter` and counts up by two from an initial value:
+
+```java
+public class DoubleCounter extends Counter {
+    public DoubleCounter(int initialValue) {
+        super(initialValue);
+    }
+
+    @Override
+    public void increment() {
+        super.increment();  // call the parent class's increment method
+        if (value % 2 != 0) {   // if the value is odd, increment again
+            increment();
+        }
+    }
+}
+```
+
+2. Improper modification of instance variables from a static context like the main method:
+
+```java
+public class MyClass { private int x = 10; public static void main ( String [] args ) { x ++; System . out . println ( x ); } }
+```
+
+   *Note: This is not good practice as it can lead to unexpected behavior in your program.*
+
+3. Additional study notes:
+   - Incorrect variable scope can lead to errors in inner classes or anonymous classes.
+   - When creating a list, the generic type must be specified both when declaring the variable and when instantiating it.
+   - Program examples for reading from files, creating JButtons, implementing interfaces for to-do lists, using Swing components in a BorderLayout, etc.
+(Some text removed that contained names of professor and university.)
 
 ## Built with
 
